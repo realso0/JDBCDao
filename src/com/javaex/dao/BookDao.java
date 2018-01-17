@@ -89,7 +89,7 @@ public class BookDao {
 							"        b.pubs, " + 
 							"        b.pub_date " + 
 							" from author a, book b " + 
-							" where a.author_id=b.author_id;"; // *로 필드명을 모두 지시하면 안된다.(문자열화 시켜줌. 바뀌는 값인 부분은 물음표로 지정)
+							" where a.author_id=b.author_id "; // *로 필드명을 모두 지시하면 안된다.(문자열화 시켜줌. 바뀌는 값인 부분은 물음표로 지정)
 			pstmt = conn.prepareStatement(query);
 
 			rs = pstmt.executeQuery(); // 결과값으로 쿼리의 주소값을 rs에 저장하였고, rs객체가 생성되었음.

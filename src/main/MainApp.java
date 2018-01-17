@@ -21,7 +21,7 @@ public class MainApp {
 		//vo로 필드 정리해준다.
 		//select는 리스트로 받는다.
 		for(AuthorVo aulist : authorList) {
-			System.out.println(aulist.getAuthorId()+aulist.toString());
+			System.out.println(aulist.toString());
 
 		}
 		
@@ -29,14 +29,14 @@ public class MainApp {
 		
 		BookDao bDao=new BookDao();
 		
-		aDao.insertBook(vo1); //db
+		bDao.insertBook(vo1); //db
 		
 		List<BookVo> bookList=bDao.selectBookList();
 		//aDao.selectAuthor(); //aDao는 데이터를 가져옴.
 		//vo로 필드 정리해준다.
 		//select는 리스트로 받는다.
 		for(BookVo bolist : bookList) {
-			System.out.println(bolist.getbookId()+bolist.toString());
+			System.out.println(bolist.toString());
 
 		}
 
